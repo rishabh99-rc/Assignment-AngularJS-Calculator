@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="form">
+    <p>
+        <mat-toolbar color="secondary">
+            <button mat-icon-button type="submit" formtarget="_blank" onclick="document.location='https://github.com/Tanya933'">
+                <mat-icon>home</mat-icon>
+            </button>
+            <h2><span class="multicolortext">Simple calculator</span></h2>
+            <span class="toolbar-spacer"></span>
+            <button mat-icon-button onclick="window.location.reload();">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </mat-toolbar>
+    </p>
+    <mat-card class="card">
+        <mat-card-header class="header-card">
+            <div>
+                <button class="button" (click)="addnum()">Add</button>
+                <button class="button" (click)="subnum()">Subtract</button>
+                <button class="button" (click)="multinum()">Multiply</button>
+                <button class="button" (click)="divnum()">Divide</button>
+                <button class="button" (click)="factnum1()">Fact of num 1</button>
+                <button class="button" (click)="factnum2()">Fact of num 2</button>
+                <button class="button" (click)="primenum1()">Prime of no.1</button>
+                <button class="button" (click)="primenum2()">Prime of no.2</button>
+            </div>
+        </mat-card-header><br>
+        <mat-card-content class="content-card">
+            <div>
+                <div class="row">
+                    <div class="column1">
+                        <p class="num">First number is : {{a}}</p>
+                    </div>
+                    <div class="column1">
+                        <p class="num">Second number is : {{b}}</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading" style="color: black; background-color: #FF7070;"><mat-icon>warning</mat-icon></div>
+                    <div class="panel-body" style="color: black;"><mat-icon>arrow_forward</mat-icon> Result shown below after reloding the page is incorrect. So press the respective button for correct answer.<br><mat-icon>arrow_forward</mat-icon> Don't press Factorial button twice or else it will give factorial of the previous number.<br><mat-icon>arrow_forward</mat-icon> Press reload button on toolbar to reload.<br><mat-icon>arrow_forward</mat-icon> Press home to go to my GitHub page.</div>
+                </div>
+                <div class="row">
+                    <div class="column2">
+                        <p class="num">The sum of 2 numbers --- {{c1}} <br><br> The difference of 2 numbers --- {{c2}} <br><br> The product of 2 numbers --- {{c3}} <br><br> The quotient of 2 numbers --- {{c4}}</p>
+                    </div>
+                    <div class="column2">
+                        <p class="num">Factorial of {{a}} --- {{fac1}} <br><br> Factorial of {{b}} --- {{fac2}}</p>
+                        <p *ngIf="count1 == 0 ;else not_prime1" class="num">{{a}} is a prime number.</p>
+                        <p *ngIf="count2 == 0 ;else not_prime2" class="num">{{b}} is a prime number.</p>
+                        <ng-template #not_prime1><p class="num">{{a}} is not a prime number</p></ng-template>
+                        <ng-template #not_prime2><p class="num">{{b}} is not a prime number</p></ng-template>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

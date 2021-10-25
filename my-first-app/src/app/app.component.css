@@ -1,0 +1,90 @@
+.form
+{
+    padding: 0px 10px 0px 10px;
+    background-color: #212121;
+}
+.multicolortext
+{
+    font-size: 45px;
+    font-weight: bold;
+    padding-left: 5px;
+    background-image: linear-gradient(to left, rgb(247, 90, 247), rgb(86, 3, 146), rgb(0, 150, 0), rgb(23, 23, 255), rgb(255, 255, 35), rgb(255, 167, 4), rgb(255, 5, 5));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.toolbar-spacer 
+{
+    flex: 1 1 auto;
+}
+
+.card
+{
+    border: 2px white solid;
+    width: auto;
+}
+
+.header-card
+{
+    border: 2px white solid;
+    background-color: #6b5b95;
+}
+
+.content-card
+{
+    background-color: #feb236;
+    border: 2px white solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.column1
+{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 64px;
+}
+
+.column2
+{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 200px;
+}
+
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.num
+{
+    color: black;
+    font-size: 20px;
+}
+
+.button
+{
+    width: 150px;
+    height: 90px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #6b5b95;
+    color: white;
+    transition-duration: 0.5s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button:hover
+{
+    background-color: #6b5b95;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
